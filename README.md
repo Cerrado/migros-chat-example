@@ -81,7 +81,11 @@ Before you begin, ensure you have:
 
 ## Usage
 
-[Add instructions on how to run and use the application]
+Run following command in your terminal:
+
+   ```bash
+   streamlit run streamlit.py
+   ```
 
 ## License
 
