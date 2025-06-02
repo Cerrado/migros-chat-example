@@ -8,21 +8,21 @@ A simple chat application example that demonstrates how to build an interactive 
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
+- [🔍 Overview](#overview)
+- [🛠️ Prerequisites](#prerequisites)
+- [💻 Installation](#installation)
   - [MacOS](#macos)
   - [Windows](#windows)
-- [Usage](#usage)
-- [Features](#features)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
+- [🚀 Usage](#usage)
+- [✨ Features](#features)
+- [❓ Troubleshooting](#troubleshooting)
+- [📄 License](#license)
 
-## 🔍 Overview {#overview}
+## Overview
 
 This application provides a user-friendly chat interface powered by AI models from Hugging Face and vector storage from Pinecone. Use it to experiment with conversational AI or as a starting point for your own projects.
 
-## 🛠️ Prerequisites {#prerequisites}
+## Prerequisites
 
 Before you begin, ensure you have:
 
@@ -36,7 +36,7 @@ Before you begin, ensure you have:
       - Make calls to your Inference Endpoints
   - **Pinecone** - [Create an account here](https://www.pinecone.io/)
 
-## 💻 Installation {#installation}
+## Installation
 
 Ensure your terminal is set to the root of this project e.g. if you have copied it to C:/Documents/development/migros-chat-example your terminal should be pointed at that path.
 
@@ -44,7 +44,7 @@ Ensure your terminal is set to the root of this project e.g. if you have copied 
 cd C:/Documents/development/migros-chat-example
 ```
 
-### MacOS {#macos}
+### MacOS 
 
 1. Create a local virtual environment:
 
@@ -72,7 +72,7 @@ cd C:/Documents/development/migros-chat-example
    python3 -m pip install -r requirements.txt
    ```
 
-### Windows {#windows}
+### Windows
 
 1. Create a local virtual environment:
 
@@ -100,7 +100,7 @@ cd C:/Documents/development/migros-chat-example
    py -m pip install -r requirements.txt
    ```
 
-## 🚀 Usage {#usage}
+## Usage
 
 Run the following command in your terminal:
 
@@ -110,14 +110,14 @@ streamlit run streamlit.py
 
 Then open your browser and navigate to `http://localhost:8501` to see the application in action.
 
-## ✨ Features {#features}
+## Features
 
 - Interactive chat interface built with Streamlit
 - AI-powered responses using Hugging Face models
 - Persistent conversation history
 - Vector storage with Pinecone for efficient retrieval
 
-## ❓ Troubleshooting {#troubleshooting}
+## Troubleshooting
 
 **API Key Issues**
 
@@ -134,6 +134,6 @@ Then open your browser and navigate to `http://localhost:8501` to see the applic
 - Check the console output for specific error messages
 - Ensure all required services (Hugging Face, Pinecone) are accessible
 
-## 📄 License {#license}
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
