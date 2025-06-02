@@ -20,6 +20,9 @@ Before you begin, ensure you have:
   - See `.env.example` for the required fields
 - API Keys for:
   - **Hugging Face** - [Create an account here](https://huggingface.co/join)
+    - **User permissions** - Set following permissions:
+      - Make calls to Interence Providers
+      - Make calls to your Inference Endpoints
   - **Pinecone** - [Create an account here](https://www.pinecone.io/)
 
 ## Installation
@@ -47,6 +50,7 @@ Before you begin, ensure you have:
    You should see a path like: `migros-chat-example/.venv/bin/python`
 
 4. Install required dependencies:
+
    ```bash
    python3 -m pip install -r requirements.txt
    ```
@@ -83,9 +87,9 @@ Before you begin, ensure you have:
 
 Run following command in your terminal:
 
-   ```bash
-   streamlit run streamlit.py
-   ```
+```bash
+streamlit run streamlit.py
+```
 
 ## License
 
