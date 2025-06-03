@@ -32,7 +32,7 @@ class ChatBot():
   else:
     docsearch = PineconeVectorStore.from_existing_index(index_name, embeddings)
 
-  repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+  repo_id = "HuggingFaceH4/zephyr-7b-beta"  # Use a supported hosted inference model
   llm = HuggingFaceEndpoint(
       repo_id=repo_id,
       temperature=0.8,
