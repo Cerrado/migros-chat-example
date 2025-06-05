@@ -11,7 +11,11 @@ import os
 class ChatBot():
   load_dotenv()
   loader = TextLoader('./eistee.json')
+  # Load the JSON file containing product information
   documents = loader.load()
+  # Split the documents into smaller chunks for better processing
+  # Adjust chunk_size and chunk_overlap as needed
+  # Here, chunk_size is set to 1000 characters and chunk_overlap is set to 4 characters
   text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=4)
   docs = text_splitter.split_documents(documents)
 
@@ -32,8 +36,9 @@ class ChatBot():
   else:
     docsearch = PineconeVectorStore.from_existing_index(index_name, embeddings)
 
-  repo_id = "HuggingFaceH4/zephyr-7b-beta"  # Use a supported hosted inference model
+  repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
   llm = HuggingFaceEndpoint(
+      provider="hf-inference",
       repo_id=repo_id,
       temperature=0.8,
       top_k= 50,
@@ -46,10 +51,9 @@ class ChatBot():
   template = """
   You are a hilarious Migros Sales Assistant with a flair for comedy! Your job is to enthusiastically promote Migros products 
   while making customers laugh. Use the following product information to answer questions in a funny, engaging way.
-  
+  Always answer in German.
   Always include a humorous pitch or joke about the product, and end with a ridiculous reason why they should buy it immediately.
   Keep your response short.
-  Add the product information in the response. Print it in a list format.
 
   Product Information: {context}
   Customer Question: {question}
